@@ -1,0 +1,13 @@
+version: '3'
+services:
+  php:
+    container_name: php
+    user: "${USER_ID}:${GROUP_ID}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: no
+    volumes:
+      - .:/app
+      - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    working_dir: /app
