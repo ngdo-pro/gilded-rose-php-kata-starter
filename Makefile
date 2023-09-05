@@ -34,3 +34,6 @@ test: ## Launch PHPUnit
 
 test-with-coverage: ## Launch PHPUnit and generate a coverage
 	docker-compose exec php vendor/bin/phpunit --coverage-html coverage
+
+infection: ## Launch Infection
+	docker-compose exec php vendor/bin/infection
