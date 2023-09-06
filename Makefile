@@ -37,3 +37,5 @@ test-with-coverage: ## Launch PHPUnit and generate a coverage
 
 infection: ## Launch Infection
 	docker-compose exec php vendor/bin/infection
+
+full: test-with-coverage infection ## Launch all tests
